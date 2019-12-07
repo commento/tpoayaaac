@@ -10,6 +10,9 @@ class person
 	change_location_to <- new_location
 		location is new_location
 
+	change_occupation <- new_occupation
+		occupation is new_occupation
+
 class animal
 	has_a liveness
 	is_alive
@@ -65,13 +68,18 @@ class vocabulary
 class rule
 	is_a definition
 
+class definition
+	is_a set_of word
+
+class word
+	has_a set_of character
+	has_a definition
+
 class tool
 	has_a scope
 
 class scope
-
-class definition
-
+	tbd
 
 
 r is_a person
@@ -81,4 +89,5 @@ while r is_alive
 	if r.age is 29
 		r change_location_to 52.520008, 13.404954
 	
-	r.age increase
+	if year_is_increased
+		r.age increase
