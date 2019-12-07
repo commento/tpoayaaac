@@ -10,13 +10,13 @@ class person
 	change_location_to <- new_location
 		location is new_location
 
-
 class animal
-	has_a 
+	has_a liveness
 	is_alive
 
 class parent
 	is_a person
+	has_a child
 
 class mother
 	is_a parent
@@ -24,7 +24,11 @@ class mother
 class father
 	is_a parent
 
+class child
+	has_a parent
+
 class occupation
+	has_a title
 	
 class thing
 	has_a name
@@ -33,7 +37,7 @@ class thing
 	has_a location
 
 class people
-	has_a set_of person
+	is_a set_of person
 
 class relationship
 	has_a person/thing
@@ -50,25 +54,31 @@ class location
 class language
 	is_a tool
 	has_a grammar
-	has_a vocabular
+	has_a vocabulary
 
 class grammar
 	is_a set_of rule
 
-class vocabular
-	is_a set_of word
-	is_a set_of definition
-	has_a relationship word -> definition
+class vocabulary
+	is_a dict_of word, definition
 
 class rule
 	is_a definition
 
 class tool
-	
+	has_a scope
+
+class scope
+
+class definition
+
 
 
 r is_a person
 r has_a name, surname, age, nationality, location, occupation
 
-while r is
-r change_location_to 52.520008, 13.404954
+while r is_alive
+	if r.age is 29
+		r change_location_to 52.520008, 13.404954
+	
+	r.age increase
