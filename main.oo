@@ -1,0 +1,74 @@
+class person
+	is_a animal
+	has_a name
+	has_a surname
+	has_a age
+	has_a nationality
+	has_a location
+	has_a occupation
+
+	change_location_to <- new_location
+		location is new_location
+
+
+class animal
+	has_a 
+	is_alive
+
+class parent
+	is_a person
+
+class mother
+	is_a parent
+
+class father
+	is_a parent
+
+class occupation
+	
+class thing
+	has_a name
+	has_a dimension
+	has_a age
+	has_a location
+
+class people
+	has_a set_of person
+
+class relationship
+	has_a person/thing
+	has_a person/thing
+
+class nationality
+	has_a location
+	has_a language
+
+class location
+	has_a latitude
+	has_a longitude
+
+class language
+	is_a tool
+	has_a grammar
+	has_a vocabular
+
+class grammar
+	is_a set_of rule
+
+class vocabular
+	is_a set_of word
+	is_a set_of definition
+	has_a relationship word -> definition
+
+class rule
+	is_a definition
+
+class tool
+	
+
+
+r is_a person
+r has_a name, surname, age, nationality, location, occupation
+
+while r is
+r change_location_to 52.520008, 13.404954
